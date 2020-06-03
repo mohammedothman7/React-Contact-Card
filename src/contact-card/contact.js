@@ -1,22 +1,24 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-class Contact extends Component() {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     name: PropTypes.name,
-  //     mobile: PropTypes.mobile,
-  //     work: PropTypes.work,
-  //     email: PropTypes.email,
-  //   };
-  // }
+class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: PropTypes.name,
+      mobile: PropTypes.mobile,
+      work: PropTypes.work,
+      email: PropTypes.email,
+    };
+  }
   render() {
     return (
       <>
-        <h1>{this.props.name}</h1>
+        <h2 id="name">{this.props.name}</h2>
         <ul>
-          <li>mobile: {this.props.mobile}</li>
+          <li id="mobile">Mobile: {this.props.mobile}</li>
+          <li id="work">Work: {this.props.work}</li>
+          <li id="email">Email: {this.props.email}</li>
         </ul>
       </>
     );
